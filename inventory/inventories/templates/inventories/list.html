@@ -4,15 +4,12 @@
 {% block title %}List{% endblock title %}
 
 {% block content %}
-<div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <div id="inventoryList"></div>
-            </div>
-        </div>
-    </div>
+<div class="row mt-5">
+    <h1>Inventory List</h1>
+    <p>All of your inventories are listed here.</p>
 </div>
 
+
+<div id="inventoryList"></div>
 <script src="{% static 'inventoryList.js' %}"></script>
 {% endblock content %}

@@ -1,7 +1,7 @@
 {
     "extends": "@tsconfig/svelte/tsconfig.json",
     "include": [
-        "inventory_fe/components/**/*",
+        "inventory_fe/**/*",
         "webpack.config.js"
     ],
     "exclude": [

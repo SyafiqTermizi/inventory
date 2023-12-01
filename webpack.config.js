@@ -45,7 +45,7 @@ module.exports = {
     context: __dirname,
     entry: {
         style: "./inventory_fe/js/style.js",
-        inventoryList: "./inventory_fe/components/inventoryList/index.ts"
+        inventoryList: "./inventory_fe/pages/inventoryList/index.ts"
     },
     resolve: {
         alias: {

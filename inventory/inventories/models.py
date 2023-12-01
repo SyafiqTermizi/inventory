@@ -35,6 +35,7 @@ class Inventory(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        verbose_name_plural = "inventories"
         constraints = [
             # Don't allow a supplier to add the same items
             models.UniqueConstraint(

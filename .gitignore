@@ -285,3 +285,5 @@ webpack-stats.json
 
 media/
 db.sqlite3
+
+static

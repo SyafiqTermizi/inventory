@@ -3,7 +3,8 @@
 
     import Table from "../../components/Table.svelte";
     import Search from "../../components/Search.svelte";
-    import { inventories } from "./store";
+
+    import { inventories, filteredInventories, searchKeyword } from "./store";
 
     onMount(async () => {
         fetch("/api/inventory")
@@ -18,7 +19,7 @@
 
 <div class="row mt-3">
     <div class="col-12">
-        <Search />
+        <Search {searchKeyword} />
     </div>
 </div>
 
@@ -26,7 +27,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <Table inventories={$inventories} />
+                <Table inventories={$filteredInventories} />
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 from rest_framework import generics
 
 from .models import Inventory
@@ -27,4 +27,14 @@ class ListInventoryView(TemplateView):
     to call the above views.
     """
 
-    template_name = "inventories/list.html"
+    template_name = "inventories/inventory_list.html"
+
+
+class DetailInventoryView(DetailView):
+    """
+    Display product detail
+    """
+
+    slug_field = "sku"
+    slug_url_kwarg = "sku"
+    model = Inventory

@@ -1,6 +1,18 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}List{% endblock title %}
 
 {% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div id="inventoryList"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'inventoryList.js' %}"></script>
 {% endblock content %}

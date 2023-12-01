@@ -45,10 +45,11 @@ module.exports = {
     context: __dirname,
     entry: {
         style: "./inventory_fe/js/style.js",
+        inventoryList: "./inventory_fe/components/inventoryList/index.ts"
     },
     resolve: {
         alias: {
-            svelte: path.resolve('node_modules', 'svelte')
+            svelte: path.resolve('node_modules', 'svelte/src/runtime'),
         },
         extensions: [".mjs", ".js", ".ts", ".svelte"],
         mainFields: ["svelte", "browser", "module", "main"],

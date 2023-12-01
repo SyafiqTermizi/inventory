@@ -6,6 +6,10 @@
 
     import { inventories, filteredInventories, searchKeyword } from "./store";
 
+    const searchParams = new URLSearchParams(window.location.search);
+
+    searchKeyword.set(searchParams.get("name") || "");
+
     onMount(async () => {
         fetch("/api/inventory")
             .then((response) => response.json())

@@ -31,8 +31,13 @@
     }
 </script>
 
-<div class:input-group={Boolean($searchKeyword)}>
-    <input type="text" class="form-control" bind:value={$searchKeyword} />
+<div class="shadow" class:input-group={Boolean($searchKeyword)}>
+    <input
+        type="text"
+        class="form-control"
+        bind:value={$searchKeyword}
+        placeholder="Search inventory by name"
+    />
     {#if $searchKeyword}
         <button class="btn btn-outline-secondary" on:click={removeSearchParams}>
             clear

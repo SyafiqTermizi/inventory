@@ -29,7 +29,7 @@
 
 <div class="row mt-3">
     <div class="col-12">
-        <div class="card">
+        <div class="card shadow">
             <div class="card-body">
                 <Table inventories={$filteredInventories} />
             </div>

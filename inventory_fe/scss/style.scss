@@ -59,3 +59,16 @@
 // Utilities
 @import "~bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
+
+body {
+    background-color: #f6f8fb;
+}
+
+.card {
+    border: none;
+}
+
+
+a {
+    text-decoration: none;
+}

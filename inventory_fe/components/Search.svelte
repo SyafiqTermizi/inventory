@@ -1,7 +1,7 @@
 <script lang="ts">
     export let searchKeyword;
 
-    // on every keyword typed update the url search params
+    // on every keyword typed update the url search params.
     $: if ($searchKeyword) {
         const searchParams = new URLSearchParams(window.location.search);
 
@@ -15,11 +15,13 @@
             "?" +
             searchParams.toString();
 
+        // I used pushState so that user can press the `back` button on the browser
+        // to go to previous search result.
         window.history.pushState({ path: newUrl }, "", newUrl);
     }
 
     function removeSearchParams() {
-        // If the user click 'clear', remove the search params and reset the store
+        // If the user click 'clear', remove the search params and reset the `searchKeyword` store
         searchKeyword.set("");
         const newUrl =
             window.location.protocol +

@@ -34,7 +34,7 @@
         <hr>
         <h3>{{ inventory.description }}</h3>
         <p>Supplied by: {{ inventory.supplier.name }}</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet consequuntur adipisci asperiores voluptate vero tenetur. Iure nulla libero quaerat, at error sequi exercitationem ea. Delectus debitis veniam ratione unde eaque ducimus ad tenetur? Nostrum, ut! Minima excepturi porro placeat culpa velit doloribus, doloremque est ducimus. Iusto, officiis enim a officia aliquam tempora dolor fuga porro cupiditate ut accusamus et reiciendis iure nesciunt maxime ullam maiores quisquam eius obcaecati possimus ipsa repellendus laudantium! Nulla, natus cumque perspiciatis libero beatae est molestias at illum obcaecati temporibus laudantium numquam ea autem nobis error, necessitatibus delectus fugiat nemo architecto! Dolor maxime nisi tempore! A maxime error consectetur non, nobis rem qui voluptatem voluptatibus nesciunt cupiditate voluptates sapiente, ullam molestiae nemo cum illum commodi eaque tenetur enim. Ratione fugiat minima earum excepturi eveniet delectus voluptatum id totam libero quasi, cupiditate itaque dolor nisi provident ex harum quas mollitia nesciunt ipsam exercitationem aliquam! Necessitatibus ex corrupti dolorum impedit corporis ea a quas natus sequi nisi voluptates eaque iste non in libero harum perferendis, quis fugiat! Repellat quae quisquam corrupti nemo ipsam odit amet nobis qui, voluptatum eveniet sint neque alias nisi quas hic, necessitatibus recusandae iste veritatis molestiae numquam quam. Beatae vel ad sit ea minima.</p>
+        <p>{{ inventory.note|default:"No description available" }}</p>
     </div>
 </div>
 {% endblock content %}

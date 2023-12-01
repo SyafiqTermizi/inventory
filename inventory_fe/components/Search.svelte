@@ -33,7 +33,7 @@
     }
 </script>
 
-<div class="shadow" class:input-group={Boolean($searchKeyword)}>
+<div class:input-group={Boolean($searchKeyword)}>
     <input
         type="text"
         class="form-control"

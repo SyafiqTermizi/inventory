@@ -25,14 +25,10 @@
 
 <div class="row mt-3">
     <div class="col-12">
-        <Search {searchKeyword} />
-    </div>
-</div>
-
-<div class="row mt-3">
-    <div class="col-12">
         <div class="card shadow">
             <div class="card-body">
+                <Search {searchKeyword} />
+                <br />
                 <Table inventories={$filteredInventories} />
             </div>
         </div>

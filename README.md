@@ -27,7 +27,7 @@
 
     DJANGO_SETTINGS_MODULE=settings.local
     ```
-3. Lastly, create a file name `.env` in this directory `docker/postgres/` with the following content:
+3. Lastly, create a new dir at `docker/postgres/`. Then add a file named `.env` with the following content:
     ```
     POSTGRES_DB=inventory_db
     POSTGRES_USER=inventory_user
@@ -44,11 +44,11 @@
     ```
     npm run build
     ```
-3. Run the project by running the following command:
+3. Run the project by running the following command and wait until it is done:
     ```
     docker compose up
     ```
-4. Run migration
+4. Since the above command will occupy the terminal, open a new one then, run migration
     ```
     docker exec inventory_be python inventory/manage.py migrate
     ```

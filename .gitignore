@@ -284,3 +284,4 @@ webpack-stats.json
 .vscode/
 
 media/
+db.sqlite3

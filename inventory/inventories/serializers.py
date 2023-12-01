@@ -17,4 +17,5 @@ class InventorySerializer(serializers.ModelSerializer):
             "name",
             "supplier",
             "is_available",
+            "url",
         ]

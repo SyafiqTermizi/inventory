@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 from suppliers.models import Supplier
 
@@ -48,6 +49,9 @@ class Inventory(models.Model):
         """
         return self.name
 
+    def get_absolute_url(self):
+        return reverse("inventories:detail", kwargs={"sku": self.sku})
+
     @property
     def is_available(self):
         """
@@ -58,6 +62,10 @@ class Inventory(models.Model):
         """
 
         return self.stock > 0
+
+    @property
+    def url(self):
+        return self.get_absolute_url()
 
     @classmethod
     def create(cls, supplier: str, name: str, description: str, note: str, stock: int):

@@ -14,7 +14,7 @@
     <tbody>
         {#each inventories as inventory}
             <tr>
-                <td>{inventory.name}</td>
+                <td><a href={inventory.url}>{inventory.name}</a></td>
                 <td>{inventory.supplier}</td>
                 <td>
                     {#if inventory.is_available}

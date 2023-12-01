@@ -1,4 +1,5 @@
-from django.views.generic import TemplateView, DetailView
+from django.urls import reverse_lazy
+from django.views.generic import DetailView, RedirectView, TemplateView
 from rest_framework import generics
 
 from .models import Inventory
@@ -38,3 +39,8 @@ class DetailInventoryView(DetailView):
     slug_field = "sku"
     slug_url_kwarg = "sku"
     model = Inventory
+
+
+class RedirectToInventoryList(RedirectView):
+    permanent = True
+    url = reverse_lazy("inventories:list")

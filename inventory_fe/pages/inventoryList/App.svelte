@@ -1,8 +1,9 @@
 <script lang="ts">
     import { onMount } from "svelte";
 
-    import Table from "../../components/Table.svelte";
+    import Empty from "../../components/Empty.svelte";
     import Search from "../../components/Search.svelte";
+    import Table from "../../components/Table.svelte";
 
     import { inventories, filteredInventories, searchKeyword } from "./store";
 
@@ -29,7 +30,11 @@
             <div class="card-body">
                 <Search {searchKeyword} />
                 <br />
-                <Table inventories={$filteredInventories} />
+                {#if $filteredInventories.length}
+                    <Table inventories={$filteredInventories} />
+                {:else}
+                    <Empty />
+                {/if}
             </div>
         </div>
     </div>

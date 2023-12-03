@@ -2,7 +2,7 @@
     export let searchKeyword;
 
     // on every keyword typed update the url search params.
-    $: if ($searchKeyword) {
+    $: {
         const searchParams = new URLSearchParams(window.location.search);
 
         searchParams.set("name", $searchKeyword);

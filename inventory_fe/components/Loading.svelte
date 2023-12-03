@@ -1,29 +1,25 @@
+<script lang="ts">
+    const headers = ["Name", "Supplier", "Availability"];
+</script>
+
 <table class="table table-hover">
     <thead>
         <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Supplier</th>
-            <th scope="col">Availability</th>
+            {#each headers as header}
+                <th scope="col">{header}</th>
+            {/each}
         </tr>
     </thead>
     <tbody>
-        {#each Array(2) as _}
+        {#each Array(5) as _}
             <tr>
-                <td>
-                    <p class="card-text placeholder-glow">
-                        <span class="placeholder col-4"></span>
-                    </p>
-                </td>
-                <td>
-                    <p class="card-text placeholder-glow">
-                        <span class="placeholder col-6"></span>
-                    </p>
-                </td>
-                <td>
-                    <p class="card-text placeholder-glow">
-                        <span class="placeholder col-4"></span>
-                    </p>
-                </td>
+                {#each Array(headers.length) as _}
+                    <td>
+                        <p class="card-text placeholder-glow">
+                            <span class="placeholder col-3"></span>
+                        </p>
+                    </td>
+                {/each}
             </tr>
         {/each}
     </tbody>

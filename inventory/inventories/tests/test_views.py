@@ -52,12 +52,10 @@ def test_inventory_detail_view_not_found(db, client):
     assert res.status_code == 404
 
 
-def test_inventory_detail_view_success(db, client):
+def test_inventory_detail_view_success(db, client, create_inventory):
     """
     Accessing the inventory detail view should return 200 if the data exist
     """
-    inventory = Inventory.create(
-        supplier="test", name="test", description="test", note="test", stock=10,
-    )
+    inventory = create_inventory()
     res = client.get(reverse("inventories:detail", kwargs={"sku": inventory.sku}))
     assert res.status_code == 200
